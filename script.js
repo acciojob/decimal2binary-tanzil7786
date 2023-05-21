@@ -1,12 +1,15 @@
-function decToBin(num) {
-// write your code here
- let res="";
-	while(num>0){
-		let rem=num%2;
-		res=res+rem.toString();
-		num = Math.floor(num/2)
-	}
-	    return res.split("").reverse().join("")
-}
+function decimalToBinary(num){
+    let binaryStr = ""
 
-module.exports = decToBin;
+    while(num>0){
+
+        let rem = num%2;
+ 
+        binaryStr = binaryStr + rem.toString()
+
+        num = Math.floor(num/2)
+    }
+  
+    return binaryStr.split("").reverse().join("")
+}
+module.exports = decimalToBinary;
