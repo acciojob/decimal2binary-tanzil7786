@@ -1,15 +1,10 @@
-function decimalToBinary(num){
-    let binaryStr = ""
-
-    while(num>0){
-
-        let rem = num%2;
- 
-        binaryStr = binaryStr + rem.toString()
-
-        num = Math.floor(num/2)
-    }
-  
-    return binaryStr.split("").reverse().join("")
+function decimalToBinary(dec){
+	let binary='';
+	while(dec>0){
+		let rem=dec%2;
+		binary=rem+binary;
+		dec=Math.floor(dec/2);
+	}
+	return binary;
 }
 module.exports = decimalToBinary;
